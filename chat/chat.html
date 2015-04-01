@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+  <meta charset="UTF-8">
+  <title>Chat</title>
+  <link rel="stylesheet" href="css/lib/bootstrap.css" />
+  <link rel="stylesheet" href="css/style.css"/>
+  <script src="js/js.js"></script>
+</head>
+<body onload="run();">
+  <div class="container-fluid app-container main">
+    <header>
+      <center>
+        <h1>CHAT</h1>
+      </center>
+    </header>
+  </div>
+  <section class="chat">
+    <div id="block"></div>
+    <div id="whitewindow1" class="container-fluid app-container main">
+      <center><p>HELLO</p>
+        <input id="name" type="text" maxlength="24" class="form-control" placeholder="Enter your name..." style="width: 150px;">
+        <button id="signIn2" type="button" class="btn btn-primary signin2">Log on</button>
+      </center>
+    </div>
+    <div id="whitewindow2" class="container-fluid app-container main">
+      <center><p>Edit your name</p>
+        <input id="nameEdit" type="text" maxlength="24" class="form-control" placeholder="Edit your name..." style="width: 150px;">
+        <input type="button" value = "Save" onClick="saveName()" class="btn btn-primary">
+      </center>
+    </div>
+    <div id="whitewindow3" class="container-fluid app-container main">
+      <center><p>Edit your message</p>
+        <textarea id="editMessage" rows="4" cols="55" placeholder="Type your text here..." style="word-wrap: break-word;border: 1px solid #00FFFF;resize: none; width: 100%;"></textarea>
+        <input type="button" value = "Save" onClick="saveRow()" class="btn btn-primary">
+      </center>
+    </div>
+    <center>
+      <button id="signIn1" type="button" class="btn btn-primary signin1" style="display: block;">Log on</button>
+      <button id="logout" type="button" class="btn btn-primary logout" style="display: none;">Log out</button>
+    </center>
+    <hr>
+    <div id="sc" style="border: 1px solid #00FFFF; height:300px; overflow: auto; width: 50%; float:left; margin-left: 25%;">
+      <div style="background-color: #FFFFFF; min-height: 250px; min-width: 600px; ">
+        <table id="table2" class="table table-striped" style="left: 10px; top: 10px; min-width: 200px; min-height: 20px;">
+          <tbody>
+            <tr><td>Edit</td><td>Delete</td><td width="13%">Name</td><td width="75%">Messages</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+    <div style="border: 1px solid #00FFFF; height:100px; overflow-y: hidden;overflow-x: auto; width: 160px; float:top;position: static;">
+      <div style="background-color: #FFFFFF; min-height: 250px; min-width: 600px; ">
+        <table id="table3" class="table table-striped table1" style="left: 10px; top: 10px; min-width: 200px; min-height: 20px;">
+          <tbody>
+            <tr><td>Your Name</td><td>Edit</td></tr>
+            <tr><td width="30%" id="td1_1"></td><td id="td2_2"></td></tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+    <div style="border: 1px solid #00FFFF; height:200px; overflow-x: hidden;overflow-y: auto; width: 160px; float:top;position: static;">
+      <div style="background-color: #FFFFFF; min-height: 250px; min-width: 600px; ">
+        <table id="table1" class="table table-striped table1" style="left: 10px; top: 10px; min-width: 200px; min-height: 20px;">
+          <tbody>
+            <tr><td id="td0_0">People Chatting</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+    <div class="input form-inline">
+      <center><textarea id="message" rows="4" cols="55" placeholder="Type your text here..." style="float:top; word-wrap: break-word;border: 1px solid #00FFFF;resize: none; width: 50%;"></textarea> </center>
+      <hr>
+      <button id="send" type="button" class="btn btn-primary send" style="margin-left: 25%; display: none;">Send</button>
+    </div>
+  </section>
+</body>
+</html> 
